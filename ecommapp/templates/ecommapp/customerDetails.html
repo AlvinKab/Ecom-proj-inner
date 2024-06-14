@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/ecommapp/style.css">
+    <title>{{customer.firstName}} {{customer.lastName}}</title>
+</head>
+<body>
+    <div class="container">
+        <div class="customer-details">
+            <h3>{{customer.firstName}} {{customer.lastName}}</h3>
+            <p><strong>Phone number: </strong>{{customer.phoneNumber}}</p>
+            <p><strong>Email: </strong>{{customer.email}}</p>
+            <p><strong>Address: </strong>{{customer.address}}</p>
+            <p><strong>Joined on: </strong>{{customer.createdAt}}</p>
+        </div>
+        <a href="{% url 'ecommapp:customer_list' %}" class="backlink">Back to customer list</a>
+    </div>
+</body>
+</html>

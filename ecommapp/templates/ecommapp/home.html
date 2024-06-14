@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/ecommapp/style.css">
+    <title>Ecommerce</title>
+</head>
+<body>
+    <h1>Welcome to our E-commerce website</h1>
+    <nav>
+        <li><a href="{% url 'ecommapp:product_list' %}">Products</a></li>
+        <li><a href="{% url 'ecommapp:customer_list' %}">Customers</a></li>
+    </nav>
+</body>
+</html>

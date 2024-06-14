@@ -5,20 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../static/ecommapp/style.css">
-    <title>Product List</title>
+    <title>{{product.name}}</title>
 </head>
 <body>
-    <h1>Products</h1>
     <ul>
-        {% for product in products %}
         <li>
             <h2>{{product.name}}</h2>
             <p>{{product.description}}</p>
-            <p>Price: {{product.price}}</p>
+            <p>Price: Kshs. {{product.price}}</p>
             <img src="{{product.image.url}}" alt="{{product.name}}">
+            <p>Available? {{product.availability|yesno: "Yes,No"}}</p>
         </li>
-        {% endfor %}
+        <a href="{% url 'ecommapp:product_list' %}" class="backlink">Back to product list</a>
     </ul>
-    <a href="{% url 'ecommapp:home' %}" class="backlink">Home</a>
 </body>
 </html>

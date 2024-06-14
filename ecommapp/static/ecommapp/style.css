@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to top right, teal, cyan);
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Changa One', sans-serif;
+}
